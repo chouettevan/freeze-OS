@@ -14,7 +14,7 @@ jobs:
       - name: Update the system
         run: echo 'Y' | pacman -Syu
       - name: install archiso
-        run: pacman -S archiso
+        run: echo 'Y' | pacman -S archiso
       - name: prepare build environment
         run: mkdir work out
       - name: build the image
