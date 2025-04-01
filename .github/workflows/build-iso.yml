@@ -29,6 +29,8 @@ jobs:
       - name: build the image
         run: mkarchiso -v -w work/ -o out/ iso/ 
       - name: create a release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git clone https://github.com/chouettevan/icy-iso
           cd icy-iso
