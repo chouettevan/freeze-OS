@@ -17,8 +17,13 @@ jobs:
         uses: actions/checkout@v4
       - name: Update the system
         run: pacman -Syu --noconfirm
-      - name: install archiso
-        run: pacman -S archiso git github-cli --noconfirm
+      - name: install necessary utils
+        run: pacman -S archiso git bash github-cli --noconfirm
+      - name: add blackarch keys
+        run: |
+          curl -O https://blackarch.org/strap.sh
+          bash strap.sh
+          pacman -Syu
       - name: prepare build environment
         run: mkdir work out
       - name: build the image
