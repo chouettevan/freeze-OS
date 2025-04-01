@@ -12,7 +12,7 @@ jobs:
       image: archlinux:latest
     steps:
       - name: Update the system
-        run: pacman -Syu
+        run: echo 'Y' | pacman -Syu
       - name: install archiso
         run: pacman -S archiso
       - name: prepare build environment
