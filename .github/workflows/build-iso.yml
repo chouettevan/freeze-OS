@@ -34,6 +34,7 @@ jobs:
         run: |
           git clone https://github.com/chouettevan/icy-iso
           cd icy-iso
+          gh release create ${{ github.ref_name }} ../out/*.iso
           for i in `find $(pwd)/../out/*.iso`
           do
             gh release upload ${{ github.ref_name }} $i
