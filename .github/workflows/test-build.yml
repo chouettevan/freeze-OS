@@ -1,6 +1,6 @@
 name: Test ISO Compilation
 
-on: [push, pull-request]
+on: [push, pull_request]
 
 
 jobs:
