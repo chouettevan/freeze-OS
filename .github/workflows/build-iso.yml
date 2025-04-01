@@ -29,14 +29,12 @@ jobs:
       - name: build the image
         run: mkarchiso -v -w work/ -o out/ iso/ 
       - name: create a release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git clone https://github.com/chouettevan/icy-iso
-          cd icy-iso
-          gh release create ${{ github.ref_name }} ../out/*.iso
-          for i in `find $(pwd)/../out/*.iso`
-          do
-            gh release upload ${{ github.ref_name }} $i
-          done
-
+        uses: "marvinpinto/action-automatic-releases@latest"
+         with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: true
+          title: "Development Build"
+          files: |
+            ../out/*.iso
+            
