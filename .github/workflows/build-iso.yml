@@ -30,10 +30,10 @@ jobs:
         run: mkarchiso -v -w work/ -o out/ iso/ 
       - name: create a release
         uses: marvinpinto/action-automatic-releases@latest
-         with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          automatic_release_tag: ${{ github.ref_name }}
-          prerelease: true
-          files: |
-            ../out/*.iso
+          with:
+            repo_token: ${{ secrets.GITHUB_TOKEN }}
+            automatic_release_tag: ${{ github.ref_name }}
+            prerelease: true
+            files: |
+              ../out/*.iso
             
