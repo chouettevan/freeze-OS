@@ -18,6 +18,6 @@ jobs:
       - name: prepare build environment
         run: cd .. && mkdir work out
       - name: build the image
-        run: cd .. &&  mkarchiso -v -w work/ -o out/ iso/
+        run: find / -name iso -type d -exec mkarchiso -v -w work/ -o out/ iso/ \;
 
 
