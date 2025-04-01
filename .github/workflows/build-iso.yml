@@ -2,7 +2,8 @@ name: Build ISO
 
 on:
   push:
-    tags: 'v.*.*.*'
+    tags:
+      - 'v.*.*.*'
 
 
 jobs:
