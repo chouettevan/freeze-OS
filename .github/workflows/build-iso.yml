@@ -29,12 +29,11 @@ jobs:
       - name: build the image
         run: mkarchiso -v -w work/ -o out/ iso/ 
       - name: create a release
-        uses: "marvinpinto/action-automatic-releases@latest"
+        uses: marvinpinto/action-automatic-releases@latest
          with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "latest"
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          automatic_release_tag: ${{ github.ref_name }}
           prerelease: true
-          title: "Development Build"
           files: |
             ../out/*.iso
             
