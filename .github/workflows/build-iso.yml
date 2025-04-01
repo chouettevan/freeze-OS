@@ -10,14 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: archlinux:latest
+      options: --privileged
     steps:
       - name: Update the system
-        run: echo 'Y' | pacman -Syu
+        run: pacman -Syu --noconfirm
       - name: install archiso
-        run: echo 'Y' | pacman -S archiso
+        run: pacman -S archiso --noconfirm
       - name: prepare build environment
-        run: cd .. && mkdir work out
+        run: mkdir work out
       - name: build the image
-        run: find / -name iso -type d -exec mkarchiso -v -w work/ -o out/ iso/ \;
+        run: mkarchiso -v -w work/ -o out/ iso/ 
 
 
