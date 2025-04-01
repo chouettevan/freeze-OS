@@ -15,8 +15,10 @@ jobs:
         run: echo 'Y' | pacman -Syu
       - name: install archiso
         run: echo 'Y' | pacman -S archiso
+      - name: find directory
+        run: ls
       - name: prepare build environment
-        run: ls && mkdir work out
+        run: mkdir work out
       - name: build the image
         run: mkarchiso -v -w work/ -o out/ iso/
 
