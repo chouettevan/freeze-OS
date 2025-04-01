@@ -17,10 +17,18 @@ jobs:
       - name: Update the system
         run: pacman -Syu --noconfirm
       - name: install archiso
-        run: pacman -S archiso --noconfirm
+        run: pacman -S archiso git github-cli --noconfirm
       - name: prepare build environment
         run: mkdir work out
       - name: build the image
         run: mkarchiso -v -w work/ -o out/ iso/ 
-
+      - name: create a release
+        if: startsWith(github.ref, 'refs/tags')
+        run: |
+          git clone https://chouettevan/icy-iso
+          cd icy-iso
+          for $i in `find $(pwd)/../out/*.iso`
+          do
+            gh release upload ${{ github.ref_name }} $i
+          done
 
