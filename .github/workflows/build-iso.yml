@@ -12,6 +12,8 @@ jobs:
       image: archlinux:latest
       options: --privileged
     steps:
+      - name: Checkout files
+        uses: actions/checkout@v4
       - name: Update the system
         run: pacman -Syu --noconfirm
       - name: install archiso
