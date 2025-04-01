@@ -25,7 +25,7 @@ jobs:
         run: mkarchiso -v -w work/ -o out/ iso/ 
       - name: create a release
         run: |
-          git clone https://chouettevan/icy-iso
+          git clone https://github.com/chouettevan/icy-iso
           cd icy-iso
           for $i in `find $(pwd)/../out/*.iso`
           do
