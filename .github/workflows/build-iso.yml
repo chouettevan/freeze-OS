@@ -29,11 +29,6 @@ jobs:
       - name: build the image
         run: mkarchiso -v -w work/ -o out/ iso/ 
       - name: create a release
-        uses: marvinpinto/action-automatic-releases@latest
-          with:
-            repo_token: ${{ secrets.GITHUB_TOKEN }}
-            automatic_release_tag: ${{ github.ref_name }}
-            prerelease: true
-            files: |
-              ../out/*.iso
-            
+        uses: softprops/action-gh-release@v2
+        with:
+          files: out/*.iso
