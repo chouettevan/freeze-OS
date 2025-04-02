@@ -21,11 +21,6 @@ jobs:
         run: pacman -Syu --noconfirm
       - name: install necessary utils
         run: pacman -S archiso git bash github-cli --noconfirm
-      - name: add blackarch keys
-        run: |
-          curl -O https://blackarch.org/strap.sh
-          bash strap.sh
-          pacman -Syu
       - name: prepare build environment
         run: mkdir work out
       - name: build the image
