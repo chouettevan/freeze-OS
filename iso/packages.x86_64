@@ -126,6 +126,19 @@ wvdial
 xfsprogs
 xl2tpd
 zsh
-#GUI
+
+# GUI
 qtile
 alacritty
+
+# Reverse engineering tools
+radare2
+r2ghidra
+python3-r2pipe
+python3
+python3-pwntools
+gef
+pwndbg
+ghidra
+
+
