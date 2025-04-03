@@ -139,7 +139,7 @@ radare2
 r2ghidra
 python3-r2pipe
 python3
-python3-pwntools
+python-pwntools
 gef
 pwndbg
 ghidra
