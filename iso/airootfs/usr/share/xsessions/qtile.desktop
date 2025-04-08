@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=qtile
+Exec=qtile
+TryExec=qtile
+Icon=
+Type=Application
+
+
