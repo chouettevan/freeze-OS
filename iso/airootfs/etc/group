@@ -1,2 +1,5 @@
-root:!*::root
-wheel:!*::frozen
+root:x:0:root
+adm:x:4:frozen
+wheel:x:10:frozen
+uucp:x:14:frozen
+frozen:x:1000:

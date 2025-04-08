@@ -131,17 +131,19 @@ zsh
 xorg
 xorg-xinit
 xclip
-xfce
+qtile
 alacritty
+lightdm
 
 # Reverse engineering tools
 radare2
 r2ghidra
-python3-r2pipe
+python-r2pipe
 python3
 python-pwntools
 gef
 pwndbg
+binwalk
 ghidra
 
 
