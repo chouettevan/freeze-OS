@@ -149,5 +149,9 @@ gef
 pwndbg
 binwalk
 ghidra
+qutebrowser
 
-
+#sandboxing
+syd
+firejail
+libseccomp
