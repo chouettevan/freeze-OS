@@ -12,13 +12,4 @@ It contains sevaral tools for reverse engineering and exploit development
 2. Boot from your USB drive
 3. Enjoy!
 
-## Notes on qtile
-the default qtile config in the iso uses the following commands:
-Alt + Enter to spawn a sheel
-Alt + b to spawn a web browser
-Alt + [0-9] to move to the corresponding window
-Alt + shift + [0-9] to move the focused window to the coresponging workspace
-Super + f + [hjkl] to move windows
-
-for the rest of commands,you can read ~/.config/qtile/config.py
 
