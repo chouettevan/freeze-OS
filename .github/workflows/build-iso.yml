@@ -25,9 +25,13 @@ jobs:
         run: mkdir work out
       - name: build the image
         run: mkarchiso -v -w work/ -o out/ iso/ 
+			- name: compress the image	
+				run: xz out/*.iso
+			- name: create a checksum file
+				run: sha256sum out/* > out/checksums.txt
       - name: create a release
         uses: softprops/action-gh-release@v2
         with:
-          files: out/*.iso
+          files: out/*
           token: ${{ secrets.GITHUB_TOKEN }}
 
