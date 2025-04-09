@@ -152,6 +152,5 @@ ghidra
 qutebrowser
 
 #sandboxing
-syd
 firejail
 libseccomp

@@ -26,7 +26,7 @@ jobs:
       - name: build the image
         run: mkarchiso -v -w work/ -o out/ iso/ 
       - name: compress the image	
-        run: xz out/*.iso
+        run: gzip out/*.iso
       - name: create a checksum file
         run: sha256sum out/* > out/checksums.txt
       - name: create a release
