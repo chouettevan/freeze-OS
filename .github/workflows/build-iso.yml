@@ -25,8 +25,12 @@ jobs:
         run: mkdir work out
       - name: build the image
         run: mkarchiso -v -w work/ -o out/ iso/ 
+      - name: get image size
+        run: ls -lah out/
       - name: compress the image	
         run: gzip out/*.iso
+      - name: get image size
+        run: ls -lah out/
       - name: create a checksum file
         run: sha256sum out/* > out/checksums.txt
       - name: create a release
