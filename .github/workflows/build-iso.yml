@@ -28,7 +28,7 @@ jobs:
       - name: get image size
         run: ls -lah out/
       - name: compress the image	
-        run: gzip out/*.iso
+        run: bzip2 out/*.iso
       - name: get image size
         run: ls -lah out/
       - name: create a checksum file
