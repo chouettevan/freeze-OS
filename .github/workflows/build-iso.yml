@@ -25,12 +25,8 @@ jobs:
         run: mkdir work out
       - name: build the image
         run: mkarchiso -v -w work/ -o out/ iso/ 
-      - name: get image size
-        run: ls -lah out/
-      - name: compress the image	
-        run: bzip2 out/*.iso
-      - name: get image size
-        run: ls -lah out/
+      - name: split the image
+        run: split --bytes=1G out/*.iso frozeniso.
       - name: create a checksum file
         run: sha256sum out/* > out/checksums.txt
       - name: create a release
