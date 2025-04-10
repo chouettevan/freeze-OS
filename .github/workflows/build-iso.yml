@@ -26,7 +26,7 @@ jobs:
       - name: build the image
         run: mkarchiso -v -w work/ -o out/ iso/ 
       - name: split the image
-        run: split --bytes=1G out/*.iso frozeniso.
+        run: cd out/ && split --bytes=1G *.iso frozeniso. && cd ..
       - name: create a checksum file
         run: sha256sum out/* > out/checksums.txt
       - name: remove the image
