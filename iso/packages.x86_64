@@ -138,10 +138,7 @@ lightdm
 # Reverse engineering tools
 radare2
 r2ghidra
-rizin
-rz-ghidra
 iaito
-rz-cutter
 python-r2pipe
 python3
 python-pwntools
