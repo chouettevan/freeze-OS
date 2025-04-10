@@ -29,6 +29,8 @@ jobs:
         run: split --bytes=1G out/*.iso frozeniso.
       - name: create a checksum file
         run: sha256sum out/* > out/checksums.txt
+      - name: remove the image
+        run: rm out/*.iso
       - name: create a release
         uses: softprops/action-gh-release@v2
         with:
