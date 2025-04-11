@@ -133,7 +133,6 @@ xorg-xinit
 xclip
 xfce4
 alacritty
-lightdm
 
 # Reverse engineering tools
 radare2
