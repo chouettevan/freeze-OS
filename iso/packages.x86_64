@@ -148,6 +148,16 @@ gef
 pwndbg
 binwalk
 ghidra
+# IDE
+neovim
+pyright
+go
+gopls
+rust
+rust-analyzer
+clang
+
+
 
 #sandboxing
 firejail
