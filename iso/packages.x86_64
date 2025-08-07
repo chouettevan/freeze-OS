@@ -133,8 +133,6 @@ xorg-xinit
 xclip
 xfce4
 alacritty
-lightdm
-qtile
 
 # Reverse engineering tools
 radare2
@@ -169,8 +167,3 @@ libseccomp
 qutebrowser
 tor
 torbrowser-launcher
-
-#keyrings
-blackarch-keyring
-
-
