@@ -170,3 +170,5 @@ libseccomp
 qutebrowser
 tor
 torbrowser-launcher
+#keyrings
+blackarch-keyring
