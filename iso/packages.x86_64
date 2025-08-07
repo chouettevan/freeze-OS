@@ -134,6 +134,8 @@ xclip
 xfce4
 alacritty
 lightdm
+qtile
+archlinux-wallpapers
 
 # Reverse engineering tools
 radare2
