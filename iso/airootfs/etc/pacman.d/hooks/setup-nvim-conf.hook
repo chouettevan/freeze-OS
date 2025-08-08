@@ -1,0 +1,13 @@
+# remove from airootfs!
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = neovim
+
+[Action]
+Description = Installing neovim configs
+When = PostTransaction
+Depends = coreutils
+Depends = git
+Exec = /opt/setup-nvim
