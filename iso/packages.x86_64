@@ -142,7 +142,6 @@ r2ghidra
 iaito
 rizin
 rz-ghidra
-jwt-cracker
 rz-cutter
 python-r2pipe
 python3
@@ -151,6 +150,7 @@ gef
 pwndbg
 binwalk
 ghidra
+
 # IDE
 neovim
 pyright
@@ -159,7 +159,6 @@ gopls
 rust
 rust-analyzer
 clang
-
 
 
 #sandboxing
