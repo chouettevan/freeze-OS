@@ -12,11 +12,13 @@ jobs:
   build-iso:
     runs-on: ubuntu-latest
     container:
-      image: archlinux:latest
+      image: blackarchlinux/blackarch:latest
       options: --privileged
     steps:
       - name: Checkout files
         uses: actions/checkout@v4
+      - name: Update the keyring
+        run: pacman -Syy --needed --noconfirm archlinux-keyring blackarch-keyring
       - name: Update the system
         run: pacman -Syu --noconfirm
       - name: install necessary utils
