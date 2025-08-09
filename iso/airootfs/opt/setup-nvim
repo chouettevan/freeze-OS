@@ -1,3 +1,4 @@
 #!/bin/sh
-su frozen -c 'git clone https://github.com/chouettevan/nvim-conf /home/frozen/.config/nvim'
-su frozen -c "nvim -c ':q'"
+export HOME=/home/frozen
+git clone https://github.com/chouettevan/nvim-conf /home/frozen/.config/nvim
+nvim -c ':q'
