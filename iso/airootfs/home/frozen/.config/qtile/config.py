@@ -34,7 +34,7 @@ from libqtile.utils import guess_terminal
 
 mod = "mod4"
 terminal = guess_terminal()
-os.system("feh --bg-scale /opt/wallpaper/img.jpg")
+os.system("feh --bg-scale /opt/wallpaper/img.jpg &")
 
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -45,6 +45,7 @@ keys = [
     Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
     Key([mod], "f", lazy.spawn("firefox"), desc="start firefox"),
     Key([mod], "q", lazy.spawn("qutebrowser"), desc="start qutebrowser"),
+    Key([mod], "t", lazy.spawn("torbrowser-launcher"), desc="start Tor browser"),
     Key([mod], "k", lazy.layout.up(), desc="Move focus up"),
     Key([mod], "space", lazy.layout.next(), desc="Move window focus to other window"),
     # Move windows between left/right columns or move up/down in current stack.
