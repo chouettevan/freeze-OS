@@ -135,6 +135,7 @@ xfce4
 alacritty
 lxdm
 qtile
+firefox
 archlinux-wallpaper
 feh
 
@@ -157,6 +158,7 @@ ghidra
 neovim
 pyright
 go
+git
 gopls
 rust
 rust-analyzer
