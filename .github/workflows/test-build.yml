@@ -17,8 +17,8 @@ jobs:
       - name: Update the system
         run: pacman -Syu --noconfirm
       - name: install necessary utils
-        run: pacman -S archiso git bash github-cli --noconfirm
+        run: pacman -S archiso git bash github-cli neovim --noconfirm
       - name: prepare build environment
-        run: mkdir work out
+        run: mkdir work out && cd iso/ && bash setup.sh && cd ..
       - name: build the image
         run: mkarchiso -v -w work/ -o out/ iso/ 
