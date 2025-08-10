@@ -1,4 +1,8 @@
 #!/bin/sh
+mv /etc/resolv.conf /etc/resolv.conf.bck
+echo 'namserver 8.8.8.8' > /etc/resolv.conf
 export HOME=/home/frozen
 git clone https://github.com/chouettevan/nvim-conf /home/frozen/.config/nvim
 nvim -c ':q'
+rm /etc/resolv.conf
+mv /etc/resolv.conf.bck /etc/resolv.conf
