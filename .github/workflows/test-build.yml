@@ -13,7 +13,7 @@ jobs:
       - name: Checkout files
         uses: actions/checkout@v4
       - name: Update the keyring
-        run: pacman -Syy --needed --noconfirm archlinux-keyring blackarch-keyring
+        run: pacman -Syy --needed --noconfirm archlinux-keyring 
       - name: Update the system
         run: pacman -Syu --noconfirm
       - name: install necessary utils
