@@ -34,7 +34,7 @@ from libqtile.utils import guess_terminal
 
 mod = "mod4"
 terminal = guess_terminal()
-os.system("feh --bg-scale /opt/wallpaper/img.jpg &")
+os.system("feh --bg-scale /opt/wallpaper/img.jpg")
 
 keys = [
     # A list of available commands that can be bound to keys can be found
